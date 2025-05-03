@@ -1,7 +1,7 @@
 const fs = require("fs")
 
-let handler = async (m, { xfac, isCreator, text, reply }) => {
-if (!isCreator) return xfacpriv()
+let handler = async (m, { xfac, XfacApis, text, reply }) => {
+if (!XfacApis) return xfacpriv()
 if (!text) return reply("namafile & reply code")
 if (!m.quoted || !m.quoted.text) return reply("namafile & reply code")
 if (!text.endsWith(".js")) return reply("Nama file harus berformat .js")
